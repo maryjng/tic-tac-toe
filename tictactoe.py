@@ -2,7 +2,6 @@ from random import randrange
 
 board = [1, 2, 3, 4, 'X', 6, 7, 8, 9]
 moves = 0
-gameon = True
 X = 'X'
 O = 'O'
 
