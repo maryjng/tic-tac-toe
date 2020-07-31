@@ -15,14 +15,16 @@ def checkboard():
     print(' ')
     print('=============='/n)
 
+                        
+def finddictvalue(dictionary, valuetofind):
+    keylist = []
+    dictlist
+                        
 def player_move():
   while y == True:
         x = int(input("Please enter your move from 1-9: "))
         if x in range(1,10):
-            # for i, j in board:
-            #     if j == x:
-            #         board.get(i, 0)
-            #         board[i] = x
+            
                     y = False
                 else: print(x , " is already taken.")
         else: print("Please enter a valid move from 1-9. ")
