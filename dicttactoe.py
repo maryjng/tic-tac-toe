@@ -1,13 +1,16 @@
 from random import randrange
 
+board = {'board[0][0]':"1", 'board[0][1]':"2", 'board[0][2]':"3", 'board[1][0]':"4", 'board[1][1]':"5", 'board[1][2]':"6", 'board[2][0]': "7", 'board[2][1]': "8", 'board[2][2]': "9"}
+
+
 def checkboard():
     print(' ')
     print('--------------')
-    print(board[(0, 0)], ' | ',board[(0, 1)], ' | ',board[(0, 2)])
+    print(dict(board[0][0]), ' | ', dict(board[0][1]), ' | ', dict(board[0][2]))
     print('--------------')
-    print(board[(1, 0)], ' | ',board[(1, 1)], ' | ',board[(1, 2)])
+    print(dict(board[1][0), ' | ', dict(board[1][1]), ' | ', dict(board[1][2]))
     print('--------------')
-    print(board[(2, 0)], ' | ',board[(2, 1)], ' | ',board[(2, 2)])
+    print(dict(board[2][0]), ' | ', dict(board[2][1]), ' | ', dict(board[2][2]))
     print('--------------')
     print(' ')
     print('=============='/n)
