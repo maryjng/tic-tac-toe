@@ -1,6 +1,7 @@
 from random import randrange
 
 board = [1, 2, 3, 4, 'X', 6, 7, 8, 9]
+#computer moves first and always picks 5
 moves = 0
 X = 'X'
 O = 'O'
