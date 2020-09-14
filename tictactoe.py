@@ -41,28 +41,30 @@ def check_win(board, z):
         return True
    else: return False
 
-
-checkboard()
-while moves < 9:
-    player_move()
-    if check_win(board, O) == True:
-        print("You won.")
+def game():
+    checkboard()
+    while moves < 9:
+        player_move()
+        if check_win(board, O) == True:
+            print("You won.")
+            checkboard()
+            break
+        moves += 1
         checkboard()
-        break
-    moves += 1
-    checkboard()
 
-    if moves == 9:
-        print("Nobody won.")
-        break
+        if moves == 9:
+            print("Nobody won.")
+         break
 
-    npc_move()
-    if check_win(board, X) == True:
-        print("You lose.")
-        break
-    checkboard()
-    moves += 1
-    checkboard()
+        npc_move()
+        if check_win(board, X) == True:
+            print("You lose.")
+            break
+        checkboard()
+        moves += 1
+        checkboard()
 
-    if moves == 9:
-        print("Nobody won.")
+        if moves == 9:
+            print("Nobody won.")
+            
+game()
