@@ -2,43 +2,42 @@ from class import *
 from random import randrange
 
 
-def player_pref():
+def assign_pieces():
     name = input("Please enter your name: ")
-    piece = input("Hello " + name + " do you prefer to be X or O?")
     x = True
     while x:
-        if piece in piecechoices:
+        piece = input("Hello " + name + " do you prefer to be X or O?")
+        if piece in [X, O]:
+            if piece == 'X':
+                npc = npc('O')
+            else npc = npc('X')
             x = False
-            return player(name, piece)
-
-
-# X = 'X'
-# O = 'O'
-
-print("Hello and welcome to tic-tac-toe.")
+            player = player(name, piece)
+       
+def betweenmoves():
+   moves += 1
+   board.checkboard()
+   if board.check_win():
+     input("Game Over. Press enter to play again.")
+     return True
+   if moves == 9:
+     input("Nobody won! Press enter to play again.")
+     return True
 
 def game():
-    checkboard()
-    while moves < 9:
-        player_move()
-        if check_win(board, O) == True:
-            print("You won.")
-            checkboard()
-            break
-        moves += 1
-        checkboard()
+    while True:
+        moves = 0
+        board = board()
+        assign_pieces()
+        while True:
+           player.player_move()
+           if betweenmoves():
+                break
+           npc.npc_move()
+           if betweenmoves():
+                break
+        
 
-        if moves == 9:
-            print("Nobody won.")
-         break
+print("Hello and welcome to tic-tac-toe.")
+game()
 
-        npc_move()
-        if check_win(board, X) == True:
-            print("You lose.")
-            break
-        checkboard()
-        moves += 1
-        checkboard()
-
-        if moves == 9:
-            print("Nobody won.")
