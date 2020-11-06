@@ -12,17 +12,13 @@ class board:
     print(' ' + str(board[6]) + ' | ' + str(board[7]) + ' | ' + str(board[8]))
     print(" ")
 
-    def check_win(self):
-       if board[0] == board[1] == board[2] or board[3] == board[4] == board[5] or  board[6] == board[7] == board[8] or board[0] == board[3] == board[6] or board[1] == board[4] == board[7] or board[2] == board[5] == board[8] or board[0] == board[4] == board[8] or board[2] == board[4] == board[6]:
-            return True
-       else: return False
-
-    def update_move(self):
-        self.moves += 1
-        if self.moves >= 9:
+  def check_win(self):
+     if board[0] == board[1] == board[2] or board[3] == board[4] == board[5] or board[6] == board[7] == board[8] or board[0] == board[3] == board[6] or board[1] == board[4] == board[7] or board[2] == board[5] == board[8] or board[0] == board[4] == board[8] or board[2] == board[4] == board[6]:
+          return True
+     else: return False
 
 class player():
-    def __init__(self, name, piece):
+  def __init__(self, name, piece):
       self.name = name
       self.piece = piece
 
@@ -37,14 +33,14 @@ class player():
         else: print("Please enter a valid move from 1-9. ")
 
 class npc():
-    def __init__(self):
-        self.
+    def __init__(self, piece):
+        self.piece = piece
 
     def npc_move():
         while True:
             npcMove = randrange(0, 9)
             if board[npcMove] != 'O':
                 if board[npcMove] != 'X':
-                    board[npcMove] = self.npcpiece
+                    board[npcMove] = self.piece
                     print("Computer has chosen tile " + str(npcMove+1))
                     break
