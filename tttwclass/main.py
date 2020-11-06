@@ -37,7 +37,7 @@ def game():
            if betweenmoves():
                 break
         
-
-print("Hello and welcome to tic-tac-toe.")
-game()
+if __name__ == "__main__":
+    print("Hello and welcome to tic-tac-toe.")
+    game()
 
