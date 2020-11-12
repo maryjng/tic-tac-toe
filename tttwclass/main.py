@@ -1,6 +1,5 @@
-from class import *
+import obj
 from random import randrange
-
 
 def assign_pieces():
     name = input("Please enter your name: ")
@@ -10,10 +9,10 @@ def assign_pieces():
         if piece in [X, O]:
             if piece == 'X':
                 npc = npc('O')
-            else npc = npc('X')
+            else: npc = npc('X')
             x = False
             player = player(name, piece)
-       
+
 def betweenmoves():
    moves += 1
    board.checkboard()
@@ -36,8 +35,7 @@ def game():
            npc.npc_move()
            if betweenmoves():
                 break
-        
+
 if __name__ == "__main__":
     print("Hello and welcome to tic-tac-toe.")
     game()
-
