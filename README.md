@@ -5,3 +5,7 @@ A simple tic-tac-toe game where the user (X) plays against the computer (O) movi
 #tttwclass
 
 I try to implement classes and exceptions and give the player the choice of X or O.
+#####
+IN PROGRESS
+REMEMBER TO TEST AND FIX - 11-30-2020
+#####
